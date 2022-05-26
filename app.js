@@ -1,11 +1,11 @@
-const express = require ('express');
-const app = express();
+const express = require('express')
+const bodyParser = require('body-parser')
+const app = express()
+const userRoutes = require('./routers/userRoutes')
 
-app.use(express.json());
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
-app.post('/user', (req, res) => {
-    res.status(201).send({});
-});
+app.use('/', userRoutes)
 
-
-module.exports = app;
+module.exports = app
