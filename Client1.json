@@ -1,0 +1,11 @@
+{
+  "canceledOrders": [],
+  "canceledOrdersDisconnect": [],
+  "completedOrdersDisconnect": [],
+  "doorsFailsDisconnect": [],
+  "retiredOrders": [],
+  "errorsDoors": [],
+  "revokedOrders": [],
+  "isConnect": {},
+  "conectedAt": []
+}

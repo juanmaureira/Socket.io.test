@@ -5,8 +5,11 @@
   "main": "index.js",
   "dependencies": {
     "ava": "^3.15.0",
+    "axios": "^0.27.2",
     "body-parser": "^1.20.0",
     "express": "^4.18.1",
+    "lowdb": "1.0.0",
+    "moment": "^2.29.3",
     "socket.io": "^4.5.1",
     "socket.io-client": "^4.5.1",
     "standard": "^17.0.0"
@@ -21,8 +24,8 @@
     "pre-test": "standard",
     "test": " npm run pre-test && ava",
     "dev": "nodemon index.js",
-    "client1": "nodemon ./client/socket.client1.js",
-    "client2": "nodemon ./client/socket.client2.js"
+    "client1": "nodemon ./client/client1/initClient1.js --ignore *.*json",
+    "client2": "nodemon ./client/socket.client2.js "
   },
   "repository": {
     "type": "git",
