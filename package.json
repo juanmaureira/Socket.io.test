@@ -21,7 +21,8 @@
     "pre-test": "standard",
     "test": " npm run pre-test && ava",
     "dev": "nodemon index.js",
-    "client":"nodemon ./client/socket.client.js"
+    "client1": "nodemon ./client/socket.client1.js",
+    "client2": "nodemon ./client/socket.client2.js"
   },
   "repository": {
     "type": "git",
