@@ -1,13 +1,23 @@
 const { initSocket, dataUser } = require("./socket.client1")
 const { createBackup } = require('../db/createdb')
-const { updateOrderApi } = require('./queries')
+const { apiFetch } = require('../apiFetch')
+
+const responses = {
+    'ECONNREFUSED' : 'DISCONNECT',
+    'ERR_BAD_REQUEST' : 'ERR_BAD_REQUEST'
+}
 
 createBackup(dataUser)
 initSocket()
 
-const apiFetch = async () => {
-    const resp = await updateOrderApi( 'users', {id:2})
-    console.log(resp.data)
-}
 
-setInterval( apiFetch, 3000 );
+setInterval( async () => {
+    let res
+    const resp = await apiFetch()
+    res = responses[resp] === undefined 
+    ? resp.data 
+    : responses[resp]
+
+    console.log(res)
+
+}, 3000 );
