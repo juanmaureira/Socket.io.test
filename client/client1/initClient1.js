@@ -10,14 +10,17 @@ const responses = {
 createBackup(dataUser)
 initSocket()
 
-
+/* 
 setInterval( async () => {
     let res
+
     const resp = await apiFetch()
+
     res = responses[resp] === undefined 
     ? resp.data 
     : responses[resp]
 
     console.log(res)
 
-}, 3000 );
+}, 3000 ); 
+*/
